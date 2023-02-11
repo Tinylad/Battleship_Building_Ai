@@ -14,7 +14,8 @@ My project focuses on different approaches to playing Battleship (i.e. searching
 
 Battleship, a game with a long history for being a trivial but challenging game, is centred around searching. You use the knowledge you have obtained so far to try and find ships, weighing up the odds (usually cognitively) of where they might be.
 
-This is, generally speaking, a very impractical problem to solve. However, Bayesian Search is the principle of Battleship, and has been used for finding lost sea vessels and can be applied to many real life search and rescue applications.
+This is, generally speaking, a very impractical problem to solve. However, Bayesian Search is the principle of Battleship, and has been used for finding lost sea vessels and can be applied to many real life search and rescue applications.**
+
 =================
 My interest lies in the different approaches, because by searching the lower probability areas first we may be able to find a target quickly that would've otherwise taken many turns to reveal, or by traditionally searching highest probability locaions we statistically will narrow down targets quickly. I would like to compare the different approaches, and possible applications for artifical neural networks to decide what to do with the input probabilities.
 
