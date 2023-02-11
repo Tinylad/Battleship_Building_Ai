@@ -15,53 +15,31 @@ My project focuses on different approaches to playing Battleship (i.e. searching
 Battleship, a game with a long history for being a trivial but challenging game, is centred around searching. You use the knowledge you have obtained so far to try and find ships, weighing up the odds (usually cognitively) of where they might be.
 
 This is, generally speaking, a very impractical problem to solve. However, Bayesian Search is the principle of Battleship, and has been used for finding lost sea vessels and can be applied to many real life search and rescue applications.
-
+=================
 My interest lies in the different approaches, because by searching the lower probability areas first we may be able to find a target quickly that would've otherwise taken many turns to reveal, or by traditionally searching highest probability locaions we statistically will narrow down targets quickly. I would like to compare the different approaches, and possible applications for artifical neural networks to decide what to do with the input probabilities.
 
 ## How is it used?
 
 The solutions explored may provide insight into the different methods used in search and rescue. This solution is a concept and is used in a demonstration / research context, needs include readability and accessibility. This extends requirements to include thorough visualisation and explanation of the data & information.
-Uses may also include being used as reference for material such as infographics to explain different search terms and their uses (using Battleship as a demonstration).
-
-
-Images will make your README look nice!
-Once you upload an image to your repository, you can link link to it like this (replace the URL with file path, if you've uploaded an image to Github.)
-![Cat](https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg)
-
-If you need to resize images, you have to use an HTML tag, like this:
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg" width="300">
-
-This is how you create code examples:
-```
-def main():
-   countries = ['Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden']
-   pop = [5615000, 5439000, 324000, 5080000, 9609000]   # not actually needed in this exercise...
-   fishers = [1891, 2652, 3800, 11611, 1757]
-
-   totPop = sum(pop)
-   totFish = sum(fishers)
-
-   # write your solution here
-
-   for i in range(len(countries)):
-      print("%s %.2f%%" % (countries[i], 100.0))    # current just prints 100%
-
-main()
-```
-
 
 ## Data sources and AI methods
-Where does your data come from? Do you collect it yourself or do you use data collected by someone else?
-If you need to use links, here's an example:
 
 Test and training data can both be generated randomly using different ship arrangements. Additional data could also be provided by gathering human data however in the context of searching, rather than just winning battleship (against humans) this data wouldn't prove particularly useful.
+So far I've tested my approaches on randomly generated ship placements, testing each approach using 1-3 thousand games. Measuring the number of wins, the table and graph below shows how different base approaches compare.
 
-[Twitter API](https://developer.twitter.com/en/docs)
 
-| Syntax      | Description |
+| Method      | Median turns to win |
 | ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| Checkerboard x Probability | 47 |
+| Probability & Probability hunt  | 54 |
+|  Probability & 4dir hunt | 61 |
+|  Checkerboard & 4dir hunt| 68 |
+|  Random & 4dir hunt | 71 |
+|  Random | 97 |
+
+![image](https://user-images.githubusercontent.com/105332964/218243571-1345031e-21ec-485d-acbc-6e4a77c43930.png)
+
+The actual AI methods that could be used to further investigate search methods most likely include Artifical Neural Networks, or an approach that evolves over the course of the game / search.
 
 ## Applications & Challenges
 
@@ -71,8 +49,7 @@ Challenges include visualisation, where 3-dimensional (grid-row, grid-column, pr
 
 ## What next?
 
-How could your project grow and become something even more? What kind of skills, what kind of assistance would you  need to move on? 
-
+So far I have only tested and investigated the data from the simpler, non-machine-learning approaches. In order to try out these approaches I need a better skill in coding, and understanding of what approaches might work for this context. Spending more time on machine learning and this project in particular I would be able to continue.
 
 ## Acknowledgments
 
